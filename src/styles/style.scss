@@ -1,0 +1,143 @@
+// sobreescritura de variables de BULMA
+$primary: #FF5A5F;
+
+@import '../../node_modules/bulma/bulma.sass';
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+@import './ps-dummyCard.scss';
+@import './ps-mansoryGallery.scss';
+@import './ps-layout.scss';
+@import './ps-card.scss';
+@import './ps-util.scss';
+@import './ps-index.scss';
+@import './ps-contacto.scss';
+@import './ps-form.scss';
+@import './ps-blog.scss';
+@import './ps-footer.scss';  
+@import './ps-navbar.scss';
+
+
+@import '../../node_modules/material-design-lite/material.min.css';
+
+
+.ps-60vh{
+    width: 50vh;
+    height: 50vh;
+    max-width: 50vh;
+    max-height: 50vh;
+}
+
+.ps-center-block{
+   
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.ps-p1 {
+    padding: 1rem!important;
+}
+
+.ps-margin-auto {
+    margin: auto!important;
+}
+
+.ps-is-rojo {
+    background-color: #FF5A5F;
+    color: white;
+}
+
+.ps-is-verde {
+    background-color: #00A699;
+    color: white;
+}
+
+.ps-is-plomo {
+    background-color: #484848;
+}
+
+.ps-is-width-100 {
+    width: 100%;
+}
+
+.card {
+    color: #484848;
+    a {
+        span {
+            color: #00A699!important;    
+        }
+    }
+}
+
+.title {
+    color: #484848;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.125;
+}
+
+.subtitle {
+    color: #767676;
+}
+
+
+
+
+
+.ps-has-text-verde {
+    color: #00A699;
+}
+
+p.ps-al-terminar {
+    small.ps-numero {
+        font-size: 3rem;
+        color: #00A699;
+    }
+}
+
+.ps-icon {
+    font-size: 2.5rem;    
+    color: #FF5A5F;
+}
+
+
+
+// New
+
+// $sizes: (0,10,15,20,25,30,50);
+// $positions: ('top','left','bottom','right');
+
+// @each $size in $sizes {
+//   .u-m-#{$size} {
+//     margin: $size + px;
+//   }
+//   .u-p-#{$size} {
+//     padding: $size + px;
+//   }
+// }
+
+// h2 {
+//     font-size: 45px;
+//     line-height: 48px;
+// }
+
+// h3 {
+//     font-size: 34px;
+//     line-height: 40px;
+// }
+
+// h1, h2 {
+//     font-family: "Roboto","Helvetica","Arial",sans-serif;
+//    font-weight: 400 
+// }
+// h3, h4 {
+//     font-family: "Roboto","Helvetica","Arial";
+//     font-weight: 400 ;
+
+  
+// }
