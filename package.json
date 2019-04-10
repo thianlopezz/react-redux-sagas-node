@@ -2,9 +2,8 @@
   "name": "react-node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "API/index.js",
   "dependencies": {
-    "@babel/node": "7.2.2",
     "@babel/polyfill": "7.2.5",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
@@ -20,7 +19,9 @@
     "webpack-cli": "3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "7.2.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "7.2.3",
     "@babel/plugin-proposal-export-default-from": "7.2.0",
     "@babel/plugin-transform-regenerator": "7.0.0",
@@ -29,22 +30,33 @@
     "babel-loader": "8.0.5",
     "concurrently": "4.1.0",
     "copy-webpack-plugin": "4.6.0",
-    "css-loader": "2.1.0",
     "html-webpack-plugin": "3.2.0",
+    "css-loader": "2.1.0",
+    "file-loader": "^3.0.1",
     "node-sass": "4.11.0",
     "nodemon": "1.18.9",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
+    "url-loader": "^1.1.2",
     "webpack-dev-server": "3.1.14"
   },
   "scripts": {
     "dev": "concurrently \"npm run webpackDevServer\" \"npm run dev:server\"",
-    "dev:server": "nodemon --exec babel-node API/server.js",
+    "dev:client": "concurrently \"npm run webpackDevServer\"",
+    "dev:server": "nodemon --exec babel-node API/index.js",
     "webpackDevServer": "webpack-dev-server --mode development --open --hot ",
-    "build": "webpack --mode production",
-    "start": "node ./API/server.js"
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "webpack --mode production",
+    "build-server": "babel API --out-dir dist/API --copy-files",
+    "start": "node ./API/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "React",
+    "NodeJs",
+    "EC6",
+    "JavaScript",
+    "Express"
+  ],
+  "author": "Thian Lopez Zambrano",
   "license": "ISC"
 }

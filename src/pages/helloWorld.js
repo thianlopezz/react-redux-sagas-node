@@ -24,8 +24,8 @@ class helloWorldPage extends React.Component {
   }
 }
 
-const mapStateToProps = ({ state }) => {
-  const { hello, hellos } = state;
+const mapStateToProps = ({ helloState }) => {
+  const { hello, hellos } = helloState;
   return {
     hello,
     hellos
